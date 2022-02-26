@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Digi-Library PHCET</string>
+    <string name="sign_in_with_google">Sign in With Google</string>
 </resources>

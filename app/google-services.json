@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "132996224253",
+    "firebase_url": "https://digilibrary-phcet-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "digilibrary-phcet",
+    "storage_bucket": "digilibrary-phcet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132996224253:android:98e7b9534ac771bc345a94",
+        "android_client_info": {
+          "package_name": "com.finite.digi_libraryphcet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132996224253-n9v21tdim8b5kf9g1uchmudbumq08m5l.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.finite.digi_libraryphcet",
+            "certificate_hash": "67b953280b3d06613512a2fb444029a87b98dd66"
+          }
+        },
+        {
+          "client_id": "132996224253-qscc9qijdvg8bvri8nfmmiu37apq5qoc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCMIg-QyoSHsk7vbHpN9EhohppVySe7kho"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132996224253-qscc9qijdvg8bvri8nfmmiu37apq5qoc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
