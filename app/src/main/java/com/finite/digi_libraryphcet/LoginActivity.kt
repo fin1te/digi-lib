@@ -40,6 +40,7 @@ class LoginActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
 
         binding.signInGoogle.setOnClickListener {
+            googleSignInClient.revokeAccess()
             signIn()
         }
     }
@@ -90,6 +91,7 @@ class LoginActivity : AppCompatActivity() {
                         startActivity(intent)
                         finish()
                     } else {
+                        googleSignInClient.signOut()
                         Toast.makeText(applicationContext, "Error! Use MES Email to Login!", Toast.LENGTH_SHORT).show()
                     }
 
