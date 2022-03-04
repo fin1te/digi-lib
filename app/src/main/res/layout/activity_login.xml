@@ -22,13 +22,26 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:elevation="5dp"
-                android:padding="15dp"
-                android:src="@drawable/ic_google"
-                tools:ignore="ContentDescription" />
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:elevation="5dp"
+                    android:padding="15dp"
+                    android:src="@drawable/ic_google"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_margin="10dp"
+                    android:text="Sign in With Google"/>
+            </LinearLayout>
         </androidx.cardview.widget.CardView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
