@@ -4,12 +4,17 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/drawable-v24/ic_google.xml" value="0.2295" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/drawable/ic_qr_code_scanner_24.xml" value="0.2375" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_detail.xml" value="0.33177083333333335" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_home.xml" value="0.33177083333333335" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_main.xml" value="0.2722222222222222" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_scan.xml" value="0.33177083333333335" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/book_singlerow.xml" value="0.25" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_book_detail.xml" value="0.22" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_home.xml" value="0.25" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_scanner.xml" value="0.33177083333333335" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_settings.xml" value="0.33177083333333335" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/horizontal_book_singlerow.xml" value="0.25462962962962965" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33177083333333335" />

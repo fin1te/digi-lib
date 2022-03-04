@@ -5,9 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.fragment.app.findFragment
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.finite.digi_libraryphcet.R
+import com.finite.digi_libraryphcet.home.HomeFragmentDirections
 import com.finite.digi_libraryphcet.model.BookModel
 
 class HorizBookAdapter(private val bookList : ArrayList<BookModel>) : RecyclerView.Adapter<HorizBookAdapter.HorizBookViewHolder>() {
@@ -24,6 +28,10 @@ class HorizBookAdapter(private val bookList : ArrayList<BookModel>) : RecyclerVi
         val currentitem = bookList[position]
 
         Glide.with(holder.itemView.context).load(currentitem.picurl).centerCrop().into(holder.horizBookImage)
+        holder.horizBookImage.setOnClickListener {
+            val action = HomeFragmentDirections.actionHomeFragmentToBookDetailFragment(currentitem.libCode)
+            findNavController(holder.itemView.findFragment()).navigate(action)
+        }
     }
 
     override fun getItemCount(): Int {

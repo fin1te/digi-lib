@@ -37,6 +37,18 @@
             <!--                    app:lottie_loop="true"-->
             <!--                    app:lottie_rawRes="@raw/notice" />-->
 
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/scanBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_qr_code_scanner_24"
+                app:borderWidth="0dp"
+                android:layout_marginBottom="10dp"
+                android:backgroundTint="#8DFF91"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
             <TextView
                 android:id="@+id/nameTitle"
                 android:layout_width="wrap_content"
@@ -52,6 +64,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="HardcodedText" />
+
+<!--            <Button-->
+<!--                android:id="@+id/viewAllBtn"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:text="View All Books"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/mechBookRecView" />-->
 
             <TextView
                 android:id="@+id/textView"
@@ -106,6 +128,31 @@
                 app:layout_constraintTop_toBottomOf="@+id/tv2"
                 tools:listitem="@layout/horizontal_book_singlerow" />
 
+            <TextView
+                android:id="@+id/tv3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Mechanical Engineering"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/compBookRecView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/mechBookRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:foregroundGravity="center"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tv3"
+                tools:listitem="@layout/horizontal_book_singlerow" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
         <!--        </androidx.core.widget.NestedScrollView>-->

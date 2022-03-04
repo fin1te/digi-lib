@@ -11,9 +11,32 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.finite.digi_libraryphcet.home.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_scannerFragment"
+            app:destination="@id/scannerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/settingsFragment"
         android:name="com.finite.digi_libraryphcet.home.SettingsFragment"
         android:label="SettingsFragment" />
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.finite.digi_libraryphcet.home.BookDetailFragment"
+        android:label="BookDetailFragment" >
+        <argument
+            android:name="bookCode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/scannerFragment"
+        android:name="com.finite.digi_libraryphcet.home.ScannerFragment"
+        android:label="ScannerFragment" >
+        <action
+            android:id="@+id/action_scannerFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>
