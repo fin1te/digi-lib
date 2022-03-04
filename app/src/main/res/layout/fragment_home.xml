@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeFragment">
+
+        <!--        <androidx.core.widget.NestedScrollView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="match_parent"-->
+        <!--            app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--            app:layout_constraintLeft_toLeftOf="parent"-->
+        <!--            app:layout_constraintRight_toRightOf="parent"-->
+        <!--            app:layout_constraintTop_toTopOf="parent">-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!--                <com.airbnb.lottie.LottieAnimationView-->
+            <!--                    android:id="@+id/noticelottie"-->
+            <!--                    android:layout_width="250dp"-->
+            <!--                    android:layout_height="180dp"-->
+            <!--                    android:layout_marginTop="50dp"-->
+            <!--                    android:layout_marginVertical="20dp"-->
+            <!--                    app:layout_constraintEnd_toEndOf="parent"-->
+            <!--                    app:layout_constraintStart_toStartOf="parent"-->
+            <!--                    app:layout_constraintTop_toTopOf="parent"-->
+            <!--                    app:lottie_autoPlay="true"-->
+            <!--                    app:lottie_loop="true"-->
+            <!--                    app:lottie_rawRes="@raw/notice" />-->
+
+            <TextView
+                android:id="@+id/nameTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:elevation="20dp"
+                android:gravity="center"
+                android:text="Books"
+                android:textColor="#A25253"
+                android:textSize="23sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="HardcodedText" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bookrecview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:foregroundGravity="center"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/nameTitle"
+                tools:listitem="@layout/book_singlerow" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        </androidx.core.widget.NestedScrollView>-->
+
+    </FrameLayout>
+</layout>

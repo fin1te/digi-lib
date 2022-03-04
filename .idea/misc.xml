@@ -7,6 +7,11 @@
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_home.xml" value="0.33177083333333335" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/activity_main.xml" value="0.2722222222222222" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/book_singlerow.xml" value="0.25" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/layout/fragment_settings.xml" value="0.33177083333333335" />
+        <entry key="..\:/androidproject/DigiLibraryPHCET/app/src/main/res/menu/bottom_nav_menu.xml" value="0.33177083333333335" />
       </map>
     </option>
   </component>

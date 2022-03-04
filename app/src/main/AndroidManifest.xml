@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.DigiLibraryPHCET">
         <activity
-            android:name=".HomeActivity"
+            android:name=".home.HomeActivity"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

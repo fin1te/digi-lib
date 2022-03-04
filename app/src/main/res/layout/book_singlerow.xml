@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foregroundGravity="center"
+    app:layout_anchorGravity="center"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center|top"
+    app:cardBackgroundColor="#FFEFEFEF"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+    <GridLayout
+        android:id="@+id/gl_noticetemp"
+        android:paddingEnd="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:background="#EFEFEF"
+        android:columnCount="10"
+        android:rowCount="2"
+        android:padding="1dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTitle"
+        tools:ignore="RtlSymmetry">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/bookImg"
+                android:layout_width="100dp"
+                android:layout_height="140dp"/>
+        </androidx.cardview.widget.CardView>
+
+
+            <GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/bookTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:text="Title"/>
+                <TextView
+                    android:id="@+id/bookAuthor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="author"/>
+                <TextView
+                    android:id="@+id/bookShelf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Shelf no."/>
+                <TextView
+                    android:id="@+id/bookNoOfCopies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scrollHorizontally="true"
+                    android:textColor="@color/black"
+                    android:textSize="17sp"
+                    android:text="Available : "/>
+            </GridLayout>
+
+
+    </GridLayout>
+    </HorizontalScrollView>
+</androidx.cardview.widget.CardView>

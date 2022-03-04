@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/profileFragment">
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.finite.digi_libraryphcet.home.ProfileFragment"
+        android:label="ProfileFragment" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.finite.digi_libraryphcet.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.finite.digi_libraryphcet.home.SettingsFragment"
+        android:label="SettingsFragment" />
+</navigation>
