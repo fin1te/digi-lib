@@ -41,7 +41,7 @@
                 android:id="@+id/nameTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:elevation="20dp"
                 android:gravity="center"
                 android:text="Books"
@@ -53,18 +53,58 @@
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="HardcodedText" />
 
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="First Year - Engineering"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/nameTitle" />
+
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/bookrecview"
+                android:id="@+id/feBookrecview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
                 android:foregroundGravity="center"
                 android:nestedScrollingEnabled="false"
                 android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintTop_toBottomOf="@+id/nameTitle"
-                tools:listitem="@layout/book_singlerow" />
+                app:layout_constraintTop_toBottomOf="@+id/textView"
+                tools:listitem="@layout/horizontal_book_singlerow" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="Computer Engineering"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/feBookrecview" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/compBookRecView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:foregroundGravity="center"
+                android:nestedScrollingEnabled="false"
+                android:orientation="horizontal"
+                android:paddingHorizontal="10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@+id/tv2"
+                tools:listitem="@layout/horizontal_book_singlerow" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

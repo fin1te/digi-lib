@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:layout_anchorGravity="center"
+    android:foregroundGravity="center"
+    app:cardElevation="3dp"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center|top"
+    app:cardBackgroundColor="#FFEFEFEF"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true">
+
+<!--    <androidx.appcompat.widget.LinearLayoutCompat-->
+<!--        android:id="@+id/gl_noticetemp"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="start"-->
+<!--        android:background="#EFEFEF"-->
+<!--        android:orientation="vertical"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/nameTitle"-->
+<!--        tools:ignore="RtlSymmetry">-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:id="@+id/cardView"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:cardCornerRadius="10dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent">-->
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/horizBookImage"
+                android:layout_width="100dp"
+                android:layout_height="140dp" />
+<!--        </androidx.cardview.widget.CardView>-->
+
+
+<!--        <GridLayout-->
+<!--            android:id="@+id/gridLayout2"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_margin="10dp"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/cardView"-->
+<!--            tools:layout_editor_absoluteX="1dp">-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/bookTitle"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Title"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="17sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/bookAuthor"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scrollHorizontally="true"-->
+<!--                android:text="author"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/bookShelf"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scrollHorizontally="true"-->
+<!--                android:text="Shelf no."-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="17sp" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/bookNoOfCopies"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scrollHorizontally="true"-->
+<!--                android:text="Available : "-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textSize="17sp" />-->
+<!--        </GridLayout>-->
+
+
+<!--    </androidx.appcompat.widget.LinearLayoutCompat>-->
+</androidx.cardview.widget.CardView>
