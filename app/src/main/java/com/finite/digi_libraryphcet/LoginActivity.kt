@@ -107,7 +107,7 @@ class LoginActivity : AppCompatActivity() {
                                 // This method is called once with the initial value and again
                                 // whenever data at this location is updated.
                                 if(snapshot.value == null) {
-                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!,type = "student", uid = currentUser.uid, picurl = currentUser.photoUrl.toString())
+                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!, booksIssue = "0", maxBooks = "4",type = "student", uid = currentUser.uid, picurl = currentUser.photoUrl.toString())
                                     myRef.child(currentUser.uid).setValue(userModel)
                                 }
                             }
@@ -136,7 +136,7 @@ class LoginActivity : AppCompatActivity() {
                                 // This method is called once with the initial value and again
                                 // whenever data at this location is updated.
                                 if(snapshot.value == null) {
-                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!, uid = currentUser.uid, type = "admin", picurl = currentUser.photoUrl.toString())
+                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!,booksIssue = "0", maxBooks = "4", uid = currentUser.uid, type = "admin", picurl = currentUser.photoUrl.toString())
                                     myRef.child(currentUser.uid).setValue(userModel)
                                 }
                             }

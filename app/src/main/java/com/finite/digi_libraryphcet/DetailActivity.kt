@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.finite.digi_libraryphcet.databinding.ActivityDetailBinding
 import com.finite.digi_libraryphcet.databinding.ActivityScanBinding
 import com.finite.digi_libraryphcet.home.SharedViewModel
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class DetailActivity : AppCompatActivity() {
@@ -21,6 +22,8 @@ class DetailActivity : AppCompatActivity() {
     private lateinit var binding : ActivityDetailBinding
     private lateinit var dbref : DatabaseReference
     private lateinit var dbref2 : DatabaseReference
+    private lateinit var dbref3 : DatabaseReference
+    private lateinit var mAuth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,6 +33,12 @@ class DetailActivity : AppCompatActivity() {
         var bookCode = ""
         var bookName = ""
         var authorName = ""
+        var noBooks = 0
+        mAuth = FirebaseAuth.getInstance()
+
+        var currentBookName = ""
+        var currentPicUrl = ""
+        var currentAuthor = ""
 
 //        dbref = FirebaseDatabase.getInstance().getReference("currentCode")
 //        dbref.addValueEventListener(object : ValueEventListener {
@@ -49,6 +58,8 @@ class DetailActivity : AppCompatActivity() {
         bookCode = sharedPreference.getString("currentCode","HE008954").toString()
 
         dbref2 = FirebaseDatabase.getInstance().getReference("books/all/$bookCode")
+
+        dbref3 = FirebaseDatabase.getInstance().getReference("pendingBooks/$bookCode")
         //Toast.makeText(this@DetailActivity, dbref2.toString(), Toast.LENGTH_LONG).show()
         Log.d("testlog", dbref2.toString())
         dbref2.addValueEventListener(object : ValueEventListener {
@@ -60,6 +71,14 @@ class DetailActivity : AppCompatActivity() {
                     binding.bookDesc.text = "Description : ${snapshot.child("desc").value.toString()}"
                     binding.bookShelf.text = "Shelf No. : ${snapshot.child("shelfNo").value.toString()}"
                     binding.bookNoOfCopies.text = "Available : ${snapshot.child("noCopies").value.toString()} Copies"
+
+                     currentBookName = snapshot.child("bookName").value.toString()
+                     currentPicUrl = snapshot.child("picurl").value.toString()
+                     currentAuthor = snapshot.child("author").value.toString()
+
+
+
+                    noBooks = Integer.parseInt(snapshot.child("noCopies").value.toString())
                     Glide.with(this@DetailActivity).load(snapshot.child("picurl").value.toString()).centerCrop().into(binding!!.bookImage)
 
                     bookName = snapshot.child("bookName").value.toString()
@@ -78,7 +97,26 @@ class DetailActivity : AppCompatActivity() {
         }
 
         binding!!.issueBookBtn.setOnClickListener {
-            Toast.makeText(this, "Under Development!", Toast.LENGTH_SHORT).show()
+
+            if(noBooks < 1) {
+                Toast.makeText(this, "No copies available currently!", Toast.LENGTH_LONG).show()
+            }
+
+            else {
+                Toast.makeText(this, "Request pending, visit library to confirm issue", Toast.LENGTH_LONG).show()
+
+                dbref3.child("bookName").setValue(currentBookName)
+                dbref3.child("noCopies").setValue(noBooks.toString())
+                dbref3.child("bookCode").setValue(bookCode)
+                dbref3.child("bookAuthor").setValue(currentAuthor)
+                dbref3.child("picurl").setValue(currentPicUrl)
+                mAuth = FirebaseAuth.getInstance()
+                val currentUser = mAuth.currentUser
+                dbref3.child("reqBy").setValue(currentUser!!.uid)
+                dbref3.child("reqName").setValue(currentUser!!.displayName)
+
+            }
+
         }
 
     }
