@@ -25,6 +25,8 @@ class PendingBookAdapter(private val bookList : ArrayList<PendingModel>) : Recyc
         return PendingBookViewHolder(view)
     }
 
+    var onItemClick: ((PendingModel) -> Unit)? = null
+
     override fun onBindViewHolder(holder: PendingBookViewHolder, position: Int) {
         val currentitem = bookList[position]
 
@@ -38,6 +40,11 @@ class PendingBookAdapter(private val bookList : ArrayList<PendingModel>) : Recyc
 //            val action = HomeFragmentDirections.actionHomeFragmentToBookDetailFragment(currentitem.libCode)
 //            findNavController(holder.itemView.findFragment()).navigate(action)
 //        }
+
+            holder.itemView.setOnClickListener {
+                onItemClick?.invoke(bookList[position])
+            }
+
     }
 
     override fun getItemCount(): Int {
