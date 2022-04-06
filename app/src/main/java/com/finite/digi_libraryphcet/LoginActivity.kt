@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.finite.digi_libraryphcet.admin.AdminLoginActivity
 import com.finite.digi_libraryphcet.databinding.ActivityLoginBinding
 import com.finite.digi_libraryphcet.home.HomeActivity
 import com.finite.digi_libraryphcet.model.UserModel
@@ -106,7 +107,7 @@ class LoginActivity : AppCompatActivity() {
                                 // This method is called once with the initial value and again
                                 // whenever data at this location is updated.
                                 if(snapshot.value == null) {
-                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!, uid = currentUser.uid, picurl = currentUser.photoUrl.toString())
+                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!,type = "student", uid = currentUser.uid, picurl = currentUser.photoUrl.toString())
                                     myRef.child(currentUser.uid).setValue(userModel)
                                 }
                             }
@@ -123,6 +124,35 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(applicationContext, "Welcome MES User!", Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                         finish()
+                    } else if(currentUser!!.email!!.contains("rishabhmehta00@gmail.com")) {
+                        // Admin Login
+
+
+                        // Sign in success, add user's data to firebase
+                        myRef.child(currentUser.uid).addListenerForSingleValueEvent(object:
+                            ValueEventListener {
+
+                            override fun onDataChange(snapshot: DataSnapshot) {
+                                // This method is called once with the initial value and again
+                                // whenever data at this location is updated.
+                                if(snapshot.value == null) {
+                                    val userModel = UserModel(uname = currentUser.displayName!!, email = currentUser.email!!, uid = currentUser.uid, type = "admin", picurl = currentUser.photoUrl.toString())
+                                    myRef.child(currentUser.uid).setValue(userModel)
+                                }
+                            }
+
+                            override fun onCancelled(error: DatabaseError) {
+                                Log.w("testModel", "Failed to read value.", error.toException())
+                            }
+
+                        })
+
+                        Log.d("SignInActivity", "signInWithCredential:success")
+                        val intent = Intent(this, AdminLoginActivity::class.java)
+                        Toast.makeText(applicationContext, "Welcome Admin!", Toast.LENGTH_SHORT).show()
+                        startActivity(intent)
+                        finish()
+
                     } else {
                         googleSignInClient.signOut()
                         Toast.makeText(applicationContext, "Error! Use MES Email to Login!", Toast.LENGTH_SHORT).show()
