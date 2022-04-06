@@ -98,7 +98,7 @@ class LoginActivity : AppCompatActivity() {
 
                     mAuth = FirebaseAuth.getInstance()
                     val currentUser = mAuth.currentUser
-                    if(currentUser!!.email!!.contains("@mes.ac.in") || currentUser.email!!.contains("@student.mes.ac.in") ) {
+                    if(currentUser!!.email!!.contains("mg168338@gmail.com") || currentUser.email!!.contains("mg168338@gmail.com") ) {
                         // Sign in success, add user's data to firebase
                         myRef.child(currentUser.uid).addListenerForSingleValueEvent(object:
                             ValueEventListener {
