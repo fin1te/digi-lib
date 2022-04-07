@@ -124,7 +124,7 @@ class LoginActivity : AppCompatActivity() {
                         Toast.makeText(applicationContext, "Welcome MES User!", Toast.LENGTH_SHORT).show()
                         startActivity(intent)
                         finish()
-                    } else if(currentUser!!.email!!.contains("mg168338@gmail.com")) {
+                    } else if(currentUser!!.email!!.contains("rishabhmehta00@gmail.com")) {
                         // Admin Login
 
 
